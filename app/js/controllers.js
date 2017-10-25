@@ -33,6 +33,11 @@ angular.module('toggle-ui.controllers', [])
         {value: 'inactive', label: 'inactive'},
         {value: 'conditionally-active', label: 'conditionally active'}
     ];
+    $scope.strategy = [
+        {value: 'affirmative', label: 'affirmative'},
+        {value: 'majority', label: 'majority'},
+        {value: 'unanimous', label: 'unanimous'}
+    ];
 
     $scope.delete = function(toggle) {
         toggle.$delete(function() {
@@ -57,6 +62,7 @@ angular.module('toggle-ui.controllers', [])
       var toggle = new Toggle();
       toggle.conditions = [];
       toggle.status = "conditionally-active";
+      toggle.strategy = 'affirmative'
       toggle.originalName = '';
 
       $scope.toggles.push(toggle);
