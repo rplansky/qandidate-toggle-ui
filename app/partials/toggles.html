@@ -23,6 +23,7 @@
     </tr>
     <tr ng-show="toggle.conditions.length">
       <td colspan="3">
+        <strong>Conditions strategy: </strong><select ng-model="toggle.strategy" ng-options="s.value as s.label for s in strategy"></select>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -43,6 +44,7 @@
           </tbody>
         </table>
       </td>
+
     </tr>
   </tbody>
 </table>
